@@ -14,17 +14,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 text-center">
-                    <div class="single-product-item">
-                        <div class="product-image">
-                            <a href="single-product.html"><img src="assets/img/products/product-img-1.jpg"
-                                    alt=""></a>
+                @foreach ($products as $item)
+                    <div class="col-lg-4 col-md-6 text-center">
+                        <div class="single-product-item">
+                            <div class="product-image">
+                                <a href="single-product.html"><img src="{{ $item->image }}" alt=""></a>
+                            </div>
+                            <h3>{{ $item->name }}</h3>
+                            <p class="product-price"><span>{{ $item->description }}</span> {{ $item->price }} </p>
+                            <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                         </div>
-                        <h3>Strawberry</h3>
-                        <p class="product-price"><span>Per Kg</span> 85$ </p>
-                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
