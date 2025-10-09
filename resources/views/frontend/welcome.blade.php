@@ -18,7 +18,7 @@
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="single-product-item">
                             <div class="product-image">
-                                <a href="single-product.html"><img src="{{ $category->image }}" alt=""
+                                <a href="/products/{{ $category->id }}"><img src="{{ $category->image }}" alt=""
                                         style="width: 100%; height: 100%;"></a>
                             </div>
                             <h3>{{ $category->name }}</h3>

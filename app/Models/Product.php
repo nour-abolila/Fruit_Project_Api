@@ -16,8 +16,15 @@ class Product extends Model
     }
 
 
-    public static function getAllProducts()
+    public static function getAllProducts($catid = null)
     {
+       if($catid){
+        $products = Product::where('category_id' , $catid)->get();
+        return $products ;
+       }
+       else
+       {
         return self::all();
+       }
     }
 }

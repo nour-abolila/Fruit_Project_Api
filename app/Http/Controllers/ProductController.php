@@ -7,9 +7,12 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index()
+  
+    public function index($catid = null)
     {
-        $products = Product::getAllProducts();
+        $products = Product::getAllProducts($catid);
         return view ('frontend.products' , compact('products'));
     }
+
+
 }

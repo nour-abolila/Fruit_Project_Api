@@ -6,7 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [CategoryController::class , 'index']);
-Route::get('/products', [ProductController::class , 'index']);
+Route::get('/products/{catid?}', [ProductController::class , 'index']);
 
 
 Route::get('/dashboard', function () {

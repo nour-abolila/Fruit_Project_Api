@@ -10,26 +10,26 @@
     <!-- title -->
     <title>Fruitkha - Slider Version</title>
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="{{ url('assets/img/favicon.png') }}">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url('assets/bootstrap/css/bootstrap.min.css') }}">
     <!-- owl carousel -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="{{ url('assets/css/owl.carousel.css') }}">
     <!-- magnific popup -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{{ url('assets/css/animate.css') }}">
     <!-- mean menu css -->
-    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
     <!-- main style -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{{ url('assets/css/main.css') }}">
     <!-- responsive -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="{{ url('assets/css/responsive.css') }}">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
                         <!-- logo -->
                         <div class="site-logo">
                             <a href="index.html">
-                                <img src="assets/img/logo.png" alt="">
+                                <img src="{{ url('assets/img/logo.png') }}" alt="">
                             </a>
                         </div>
                         <!-- logo -->
@@ -232,7 +232,7 @@
     <!-- end features list section -->
 
 
-{{-- كدة انا حجزت مكان عندى فالصفحة --}}
+    {{-- كدة انا حجزت مكان عندى فالصفحة --}}
     @yield('content')
 
 
@@ -244,19 +244,19 @@
                 <div class="col-lg-12">
                     <div class="logo-carousel-inner">
                         <div class="single-logo-item">
-                            <img src="assets/img/company-logos/1.png" alt="">
+                            <img src="{{ url('assets/img/company-logos/1.png') }}" alt="">
                         </div>
                         <div class="single-logo-item">
-                            <img src="assets/img/company-logos/2.png" alt="">
+                            <img src="{{ url('assets/img/company-logos/2.png') }}" alt="">
                         </div>
                         <div class="single-logo-item">
-                            <img src="assets/img/company-logos/3.png" alt="">
+                            <img src="{{ url('assets/img/company-logos/3.png') }}" alt="">
                         </div>
                         <div class="single-logo-item">
-                            <img src="assets/img/company-logos/4.png" alt="">
+                            <img src="{{ url('assets/img/company-logos/4.png') }}" alt="">
                         </div>
                         <div class="single-logo-item">
-                            <img src="assets/img/company-logos/5.png" alt="">
+                            <img src="{{ url('assets/img/company-logos/5.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -316,9 +316,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>, All Rights
+                    <p>Copyrights &copy; 2019 - <a href="{{ url('https://imransdesign.com/') }}">Imran Hossain</a>,
+                        All Rights
                         Reserved.<br>
-                        Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+                        Distributed By - <a href="{{ url('https://themewagon.com/') }}">Themewagon</a>
                     </p>
                 </div>
                 <div class="col-lg-6 text-right col-md-12">
@@ -337,25 +338,25 @@
     </div>
     <!-- end copyright -->
     <!-- jquery -->
-    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="{{ url('assets/js/jquery-1.11.3.min.js') }}"></script>
     <!-- bootstrap -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ url('assets/bootstrap/js/bootstrap.min.js') }}"></script>
     <!-- count down -->
-    <script src="assets/js/jquery.countdown.js"></script>
+    <script src="{{ url('assets/js/jquery.countdown.js') }}"></script>
     <!-- isotope -->
-    <script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+    <script src="{{ url('assets/js/jquery.isotope-3.0.6.min.js') }}"></script>
     <!-- waypoints -->
-    <script src="assets/js/waypoints.js"></script>
+    <script src="{{ url('assets/js/waypoints.js') }}"></script>
     <!-- owl carousel -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{ url('assets/js/owl.carousel.min.js') }}"></script>
     <!-- magnific popup -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{ url('assets/js/jquery.magnific-popup.min.js') }}"></script>
     <!-- mean menu -->
-    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="{{ url('assets/js/jquery.meanmenu.min.js') }}"></script>
     <!-- sticker js -->
-    <script src="assets/js/sticker.js"></script>
+    <script src="{{ url('assets/js/sticker.js') }}"></script>
     <!-- main js -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{ url('assets/js/main.js') }}"></script>
 </body>
 
 </html>
