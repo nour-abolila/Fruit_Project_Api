@@ -56,13 +56,14 @@
                         <!-- menu start -->
                         <nav class="main-menu">
                             <ul>
-                                <li class="current-list-item"><a href="#">Home</a>
-                                    <ul class="sub-menu">
+                                <li class="current-list-item"><a href="/">Home</a>
+                                    {{-- <ul class="sub-menu">
                                         <li><a href="index.html">Static Home</a></li>
                                         <li><a href="index_2.html">Slider Home</a></li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                                 <li><a href="/products">products</a></li>
+                                <li><a href="/categories">categories</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="sub-menu">
                                         <li><a href="404.html">404 page</a></li>
