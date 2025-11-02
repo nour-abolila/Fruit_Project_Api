@@ -8,8 +8,8 @@
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="section-title">
                         <h3><span class="orange-text">Our</span> Products</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet
-                            beatae optio.</p>
+                        <p>Our website offers some of the best products Here is a list of products available in our store,
+                            Shop and buy what you love.</p>
                     </div>
                 </div>
             </div>
@@ -17,12 +17,22 @@
                 @foreach ($products as $item)
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="single-product-item">
-                            <div class="product-image">
-                                <a href="single-product.html"><img src="{{ asset($item->image) }}" alt=""></a>
+                            <div class="product-image"
+                                style="width: 100%; height: 250px; overflow: hidden; border-radius: 10px;">
+                                <a href="single-product.html"><img src="{{ asset($item->image) }}" alt=""
+                                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;"></a>
                             </div>
                             <h3>{{ $item->name }}</h3>
                             <p class="product-price"><span>{{ $item->description }}</span> {{ $item->price }} </p>
                             <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <form method="POST" action="{{ route('deleteproduct', $item->id) }}" {{-- لتاكيد الحذف --}}
+                                onsubmit="return confirm('هل أنت متأكد أنك تريد حذف هذا العنصر؟');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="cart-btn"> Delete</button>
+                                <a href="{{ route('editproduct', $item->id) }}" class="cart-btn"><i
+                                        class="fas fa-shopping-cart"></i> edit</a>
+                            </form>
                         </div>
                     </div>
                 @endforeach

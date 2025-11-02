@@ -7,9 +7,9 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="section-title">
-                        <h3><span class="orange-text">Our</span> Products</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet
-                            beatae optio.</p>
+                        <h3><span class="orange-text">Our</span> Categories</h3>
+                        <p>Our website offers some of the best products Here is a list of products available in our store,
+                            Shop and buy what you love.</p>
                     </div>
                 </div>
             </div>
@@ -17,11 +17,12 @@
                 @foreach ($categories as $category)
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="single-product-item">
-                            <div class="product-image">
+                            <div class="product-image"
+                                style="width: 100%; height: 250px; overflow: hidden; border-radius: 10px;">
                                 <a href="/products/{{ $category->id }}"><img src="{{ $category->image }}" alt=""
-                                        style="width: 100%; height: 100%;"></a>
+                                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;"></a>
                             </div>
-                            <h3>{{ $category->name }}</h3>
+                            <h3 style="margin-top: 20px;">{{ $category->name }}</h3>
                         </div>
                     </div>
                 @endforeach

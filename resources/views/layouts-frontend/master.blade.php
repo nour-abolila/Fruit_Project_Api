@@ -40,6 +40,7 @@
         </div>
     </div>
     <!--PreLoader Ends-->
+
     <!-- header -->
     <div class="top-header-area" id="sticker">
         <div class="container">
@@ -64,6 +65,7 @@
                                 </li>
                                 <li><a href="/products">products</a></li>
                                 <li><a href="/categories">categories</a></li>
+                                <li><a href="/addproduct">addproduct</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="sub-menu">
                                         <li><a href="404.html">404 page</a></li>
@@ -109,6 +111,7 @@
         </div>
     </div>
     <!-- end header -->
+
     <!-- search area -->
     <div class="search-area">
         <div class="container">
@@ -127,6 +130,7 @@
         </div>
     </div>
     <!-- end search area -->
+
     <!-- home page slider -->
     <div class="homepage-slider">
         <!-- single home slider -->
@@ -188,10 +192,10 @@
         </div>
     </div>
     <!-- end home page slider -->
+
     <!-- features list section -->
     <div class="list-section pt-80 pb-80">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                     <div class="list-box d-flex align-items-center">
@@ -227,14 +231,17 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- end features list section -->
 
 
+
+
     {{-- كدة انا حجزت مكان عندى فالصفحة --}}
     @yield('content')
+
+
 
 
 
@@ -265,6 +272,7 @@
         </div>
     </div>
     <!-- end logo carousel -->
+
     <!-- footer -->
     <div class="footer-area">
         <div class="container">
@@ -312,6 +320,7 @@
         </div>
     </div>
     <!-- end footer -->
+
     <!-- copyright -->
     <div class="copyright">
         <div class="container">
@@ -338,6 +347,8 @@
         </div>
     </div>
     <!-- end copyright -->
+
+    <!-- Javascript links -->
     <!-- jquery -->
     <script src="{{ url('assets/js/jquery-1.11.3.min.js') }}"></script>
     <!-- bootstrap -->
@@ -358,6 +369,33 @@
     <script src="{{ url('assets/js/sticker.js') }}"></script>
     <!-- main js -->
     <script src="{{ url('assets/js/main.js') }}"></script>
+    <!-- رسالة التاكيد سواء الحذف او الاضافة -->
+    <script src="{{ url('https://cdn.jsdelivr.net/npm/sweetalert2@11') }}"></script>
+
+    {{-- كود الرسائل --}}
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'تم بنجاح!',
+                text: '{{ session('success') }}',
+                showConfirmButton: false,
+                timer: 3000
+            });
+        </script>
+    @endif
+
+    @if (session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'حدث خطأ!',
+                text: '{{ session('error') }}',
+                showConfirmButton: false,
+                timer: 3000
+            });
+        </script>
+    @endif
 </body>
 
 </html>
